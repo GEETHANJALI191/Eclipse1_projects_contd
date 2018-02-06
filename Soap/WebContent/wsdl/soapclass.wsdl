@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="SoapClassService" targetNamespace="http://soap.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://soap.com/" schemaLocation="soapclass_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="messageResponse">
+    <wsdl:part name="parameters" element="tns:messageResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="message">
+    <wsdl:part name="parameters" element="tns:message">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SoapClass">
+    <wsdl:operation name="message">
+      <wsdl:input name="message" message="tns:message">
+    </wsdl:input>
+      <wsdl:output name="messageResponse" message="tns:messageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SoapClassServiceSoapBinding" type="tns:SoapClass">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="message">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="message">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="messageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapClassService">
+    <wsdl:port name="SoapClassPort" binding="tns:SoapClassServiceSoapBinding">
+      <soap:address location="http://localhost:8095/Soap/services/SoapClassPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

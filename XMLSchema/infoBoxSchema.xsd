@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/infoBoxSchema" xmlns:tns="http://www.example.org/infoBoxSchema" elementFormDefault="qualified">
+
+    <element name="infobox" type="tns:infoBox"></element>
+    
+    <complexType name="infoBox">
+    	<sequence>
+    		<element name="author" type="string"></element>
+    		<element name="country" type="string"></element>
+    		<element name="originaltitle" type="string"></element>
+    		<element name="id" type="integer"></element>
+    	</sequence>
+    </complexType>
+</schema>

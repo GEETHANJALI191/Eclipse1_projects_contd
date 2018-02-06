@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:infobox xmlns:tns="http://www.example.org/infoBoxSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/infoBoxSchema infoBoxSchema.xsd ">
+  <tns:author>varun dhawan</tns:author>
+  <tns:country>india</tns:country>
+  <tns:originaltitle>path of life</tns:originaltitle>
+  <tns:id>23</tns:id>
+</tns:infobox>
